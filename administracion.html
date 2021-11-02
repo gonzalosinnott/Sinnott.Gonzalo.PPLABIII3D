@@ -39,14 +39,11 @@
           <h2 id="tituloForm"></h2>
           <form id="frm"> 
 
-            <!-- ID -->
             <input type="hidden" id="txtId" name="txtId">
 
-            <!-- TITULO -->
             <input class="form-style" type="text" id="txtTitulo" name="txtTitulo" placeholder="TITULO" autocomplete="off" required>
     
 
-            <!-- TRANSACCION -->
             <select class="form-style" name="txtTransaccion" id="txtTransaccion">
               <option value="" disabled selected>---ELEGIR TRANSACCION---</option>
               <option value="Venta">Venta</option>
@@ -54,28 +51,23 @@
               <option value="Permuta">Permuta</option>              
             </select>
             
-            <!-- DESCRIPCION -->          
             <textarea class="form-style" id="txtDescripcion" name="txtDescripcion" rows="2"  placeholder="DESCRIPCION" autocomplete="off" required></textarea>
             
-            <!-- PRECIO -->
             <div class="inputWithIcon">
               <input class="form-style" type="number" id="txtPrecio" name="txtPrecio" placeholder="PRECIO" autocomplete="off" required min="1" >
               <i class="fas fa-dollar-sign"></i>
             </div>
             
-            <!-- CANTIDAD BAÑOS -->
             <div class="inputWithIcon">
               <input class="form-style"type="number" id="txtPuertas" name="txtPuertas" placeholder="PUERTAS" autocomplete="off" required min="1">
               <i class="fas fa-door-open" aria-hidden="true"></i>
             </div>
 
-            <!-- CANTIDAD AUTOS -->
             <div class="inputWithIcon">
               <input class="form-style" type="number" id="txtKms" name="txtKms" placeholder="KMs" autocomplete="off" required min="0">
               <i class="fa fa-tachometer-alt" aria-hidden="true"></i>
             </div>
             
-            <!-- CANTIDAD DORMITORIOS -->
             <div class="inputWithIcon">
               <input class="form-style" type="number" id="txtPotencia" name="txtPotencia" placeholder="POTENCIA" autocomplete="off" required min="1">
               <i class="fas fa-bolt" aria-hidden="true"></i>
@@ -83,7 +75,6 @@
             
             <br>
 
-            <!-- BOTONES --> 
             <div class="buttons">             
               <input class="btn-style" type="submit" id="btnSubmit" style="font-family: FontAwesome" value="&#xf00c;">
               <input class="btn-style" type="button" id="btnDelete" style="font-family: FontAwesome" value="&#xf1f8;" hidden="hidden">
@@ -92,7 +83,6 @@
 
           </form>        
         </section>
-
         
         <section class="lista-elementos" id="wide">
           <h2>LISTADO DE ANUNCIOS</h2>

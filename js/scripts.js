@@ -26,8 +26,7 @@ function resetForm(){
     botonCancelar.hidden = true;
 }
 
-///RECUPERACION DE ID POR DELEGACION DE EVENTOS
-///MANEJO DEL BOTON DELETE
+
 window.addEventListener("click", (e)=>{
 
     if(e.target.matches("td")){
@@ -49,30 +48,25 @@ window.addEventListener("click", (e)=>{
 
 $formulario.addEventListener("submit", (e) => {
     
-    //PREVIENE EL ENVIO DEL SUBMIT POR DEFECTO
+
     e.preventDefault();
 
-    ///MODIFICAR DE ACUERDO A LA CONSIGNA (CAMPOS DEL FORMULARIO)
     const {txtId, txtTitulo, txtTransaccion, txtDescripcion, txtPrecio, txtPuertas, txtKms, txtPotencia} = $formulario;
     
-    ///MODIFICAR DE ACUERDO A LA CONSIGNA (CAMPOS DEL OBJETO)
     const formAnuncio = new Anuncio_Auto(parseInt(txtId.value), txtTitulo.value, txtTransaccion.value, txtDescripcion.value, txtPrecio.value, txtPuertas.value, txtKms.value, txtPotencia.value);
     
     if($formulario.txtId.value === ''){
-        //ALTA
         formAnuncio.id = getMaxId() + 1;
         handlerCreate(formAnuncio);
         console.log(formAnuncio);
     }
     else{
-        //UPDATE
         formAnuncio.id = parseInt(formAnuncio.id);
         handlerUpdate(formAnuncio);
     }
     resetForm();
 });
 
-///DEVUELVE EL ID MAXIMO DE LOS ANUNCIOS
 function getMaxId() {
     if(anuncios.length == 0){
         return 0 ;
@@ -82,7 +76,6 @@ function getMaxId() {
     }
 }
 
-///CREACION DE ANUNCIO NUEVO
 const handlerCreate = (nuevoAnuncio)=>{
     
     anuncios.push(nuevoAnuncio);
@@ -91,7 +84,6 @@ const handlerCreate = (nuevoAnuncio)=>{
     console.log(anuncios);
 };
 
-///ACTUALIZACION DE ANUNCIO
 const handlerUpdate = (anuncioEditado)=>{
 
     console.log(anuncioEditado);
@@ -108,7 +100,6 @@ const handlerUpdate = (anuncioEditado)=>{
 };
 
 
-//ELIMINAR ANUNCIO POR ID
 const handlerDelete = (id) => {
 
     if (confirm("Quiere eliminar el anuncio ?")) {
@@ -123,15 +114,12 @@ const handlerDelete = (id) => {
     }
 };
 
-///ACTUALIZAR EL LOCALSTORAGE
 const actualizarStorage = (data)=>{
     localStorage.setItem('anuncios', JSON.stringify(data));
 };
 
-///ACTUALIZAR LA TABLA
 function actualizarTabla() {
 
-    ///ANIMACION SPINNER
     if (localStorage.length !== 0) {
 
         while ($divTabla.hasChildNodes()) {
@@ -153,7 +141,6 @@ function actualizarTabla() {
     }
 };
 
-///CREACION DEL SPINNER
 function crearSpinner() {
     const spinner = document.createElement("img");
   
@@ -165,12 +152,10 @@ function crearSpinner() {
     return spinner;
 };
 
-///CARGAR FORMULARIO A PARTIR DEL ID DADO POR EL CLICK EN LA TABLA
 function cargarFormulario(anuncio) {
 
     mostrarBotones();
 
-    ///MODIFICAR DE ACUERDO A LA CONSIGNA
     const {txtId, txtTitulo, txtTransaccion, txtDescripcion, txtPrecio, txtPuertas, txtKms, txtPotencia} = $formulario;
 
     txtId.value = parseInt(anuncio.id);
@@ -194,8 +179,7 @@ function mostrarBotones() {
 
 function sortTabla(array) {
     array.sort((a, b) => {
-        ///CAMBIAR POR EL CAMPO QUE SE QUIERE ORDENAR
-        return a.precio - b.precio;
+        return a.titulo - b.titulo;
     });  
         
 };
