@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./js/scripts.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+   
+    <title>1° PARCIAL LABORATORIO III</title>
+  </head>
+  <body>
+    <header>
+      <nav class="icon-bar">
+        <ul>
+          <li><a href="/index.html" class="logo"></a></li>
+          <li><a href="./administracion.html" ><i class="fa fa-fw fa-search"></i>ADMINISTRACION</a></li>
+          <li><a href="#"><i class="fa fa-fw fa-envelope"></i>CONTACTO</a></li>
+          <li><a href="#"><i class="fa fa-fw fa-user"></i>SOBRE NOSOTROS&nbsp</a></li>
+        </ul>     
+      </nav>
+    </header>
+
+    <h1 class="title">Administracion</h1>
+    <div>
+      <img class="banner" src="./assets/banner.jpg" alt="banner" />
+    </div>
+    
+    <br>
+
+    <main>
+      <div class="container" id="parent">
+        <section class="carga-datos" id="narrow">
+          <h2 id="tituloForm"></h2>
+          <form id="frm"> 
+
+            <!-- ID -->
+            <input type="hidden" id="txtId" name="txtId">
+
+            <!-- TITULO -->
+            <input class="form-style" type="text" id="txtTitulo" name="txtTitulo" placeholder="TITULO" autocomplete="off" required>
+    
+
+            <!-- TRANSACCION -->
+            <select class="form-style" name="txtTransaccion" id="txtTransaccion">
+              <option value="" disabled selected>---ELEGIR TRANSACCION---</option>
+              <option value="Venta">Venta</option>
+              <option value="Alquiler">Alquiler</option>
+              <option value="Permuta">Permuta</option>              
+            </select>
+            
+            <!-- DESCRIPCION -->          
+            <textarea class="form-style" id="txtDescripcion" name="txtDescripcion" rows="2"  placeholder="DESCRIPCION" autocomplete="off" required></textarea>
+            
+            <!-- PRECIO -->
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtPrecio" name="txtPrecio" placeholder="PRECIO" autocomplete="off" required min="1" >
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            
+            <!-- CANTIDAD BAÑOS -->
+            <div class="inputWithIcon">
+              <input class="form-style"type="number" id="txtPuertas" name="txtPuertas" placeholder="PUERTAS" autocomplete="off" required min="1">
+              <i class="fas fa-door-open" aria-hidden="true"></i>
+            </div>
+
+            <!-- CANTIDAD AUTOS -->
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtKms" name="txtKms" placeholder="KMs" autocomplete="off" required min="0">
+              <i class="fa fa-tachometer-alt" aria-hidden="true"></i>
+            </div>
+            
+            <!-- CANTIDAD DORMITORIOS -->
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtPotencia" name="txtPotencia" placeholder="POTENCIA" autocomplete="off" required min="1">
+              <i class="fas fa-bolt" aria-hidden="true"></i>
+            </div>
+            
+            <br>
+
+            <!-- BOTONES --> 
+            <div class="buttons">             
+              <input class="btn-style" type="submit" id="btnSubmit" style="font-family: FontAwesome" value="&#xf00c;">
+              <input class="btn-style" type="button" id="btnDelete" style="font-family: FontAwesome" value="&#xf1f8;" hidden="hidden">
+              <input class="btn-style" type="reset"  id="btnCancel" style="font-family: FontAwesome" value="&#xf00d;" hidden="hidden">
+            </div>
+
+          </form>        
+        </section>
+
+        
+        <section class="lista-elementos" id="wide">
+          <h2>LISTADO DE ANUNCIOS</h2>
+          <div id="divTabla"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <br>
+
+    <footer>
+      <div class="footer-content">&copy; 2021 - Gonzalo Sinnott Segura -</div>
+    </footer>
+  </body>
+  
+</html>

@@ -1,0 +1,223 @@
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.icon-bar {
+  width: 100%; 
+  background-color: rgb(24, 122, 233); 
+  overflow: hidden; 
+}
+
+.icon-bar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.icon-bar ul li {
+  list-style-type: none;
+}
+
+.icon-bar ul li a {
+  transition: all 0.3s ease;
+  color: white;
+  display: block;
+  line-height: 3em;
+  padding: 1em 3em;
+  text-decoration: none;
+}
+
+.icon-bar:hover a:hover {
+  background-color: rgb(25, 59, 97);
+}
+
+.icon-bar ul li a.logo  {
+  background-color: #57aa8b;
+}
+
+li {
+  float: right;
+}
+
+li:first-child {
+  float: left;
+}
+
+.logo {
+  background-image: url(../assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+.banner {
+  background-image: url(../assets/banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.container {
+  width: auto;
+  background: rgb(250, 250, 250);
+  padding: 20px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+.title{
+  width: 100%;
+  text-align: center;
+}
+
+body{
+background: #72a4f046
+}
+
+footer{
+  bottom: 10px;
+  width: 100%;
+  background-color: rgb(24, 122, 233); 
+  overflow: auto; 
+  text-align: center;
+}
+
+.footer-content{
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.form-style{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(132, 199, 219);
+  background-color: #ffffff00;
+
+}
+
+.form-style:focus {
+  border: 3px solid #555;
+}
+
+fieldset{
+  border-color:rgb(132, 199, 219);
+ }
+
+.radio {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.inputWithIcon input[type="number"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+ 
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  padding: 12px 8px;
+  color: rgb(0, 0, 0);
+}
+
+.buttons{
+  width: 100%;
+  text-align: center;
+}
+
+.btn-style {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  bottom: 10%;
+  right: 4%;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+#btnSubmit{
+  background-color: rgb(32, 153, 16);
+}
+
+#btnDelete{
+  background-color: rgb(172, 15, 15);
+}
+
+#btnCancel{
+  background-color: rgb(224, 211, 16);
+}
+
+
+h2{
+  text-align: center;
+}
+
+#divTabla {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+}
+
+#divTabla td, #divTabla th {
+  padding: 8px;
+  text-align: center;
+}
+
+#divTabla tr:nth-child(even){background-color: #f2f2f2;}
+
+#divTabla tr:hover {background-color: #ddd;}
+
+#divTabla th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(132, 199, 219);
+  color: white;
+}
+
+table{
+  width: 100%;
+}
+
+.portada {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  background-image: url("../assets/banner2.jpg");
+}
+
+h2{
+  text-align: left;
+  color: rgb(24, 37, 221);
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.divAnuncios{
+  text-align: left;
+  padding: 10px;
+  margin: 10px;  
+}
